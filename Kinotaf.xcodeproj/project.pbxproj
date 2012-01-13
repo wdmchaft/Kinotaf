@@ -39,18 +39,18 @@
 		2599773F14BFAD760016C335 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2599774114BFAD760016C335 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2599774314BFAD760016C335 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2599774714BFAD760016C335 /* Kinotaf-Info.plist */ = {isa = PBXFileReference; path = "Kinotaf-Info.plist"; sourceTree = "<group>"; };
+		2599774714BFAD760016C335 /* Kinotaf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kinotaf-Info.plist"; sourceTree = "<group>"; };
 		2599774914BFAD760016C335 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2599774B14BFAD760016C335 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2599774D14BFAD760016C335 /* Kinotaf-Prefix.pch */ = {isa = PBXFileReference; path = "Kinotaf-Prefix.pch"; sourceTree = "<group>"; };
-		2599774E14BFAD760016C335 /* KZAppDelegate.h */ = {isa = PBXFileReference; path = KZAppDelegate.h; sourceTree = "<group>"; };
+		2599774D14BFAD760016C335 /* Kinotaf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kinotaf-Prefix.pch"; sourceTree = "<group>"; };
+		2599774E14BFAD760016C335 /* KZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZAppDelegate.h; sourceTree = "<group>"; };
 		2599774F14BFAD760016C335 /* KZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZAppDelegate.m; sourceTree = "<group>"; };
 		2599775214BFAD770016C335 /* Kinotaf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kinotaf.xcdatamodel; sourceTree = "<group>"; };
 		2599775914BFAD770016C335 /* KinotafTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinotafTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2599775A14BFAD770016C335 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		2599776314BFAD770016C335 /* KinotafTests-Info.plist */ = {isa = PBXFileReference; path = "KinotafTests-Info.plist"; sourceTree = "<group>"; };
+		2599776314BFAD770016C335 /* KinotafTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KinotafTests-Info.plist"; sourceTree = "<group>"; };
 		2599776514BFAD770016C335 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2599776714BFAD770016C335 /* KinotafTests.h */ = {isa = PBXFileReference; path = KinotafTests.h; sourceTree = "<group>"; };
+		2599776714BFAD770016C335 /* KinotafTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinotafTests.h; sourceTree = "<group>"; };
 		2599776814BFAD770016C335 /* KinotafTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinotafTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
