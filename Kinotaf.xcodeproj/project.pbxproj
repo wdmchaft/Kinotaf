@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2599773E14BFAD760016C335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599773D14BFAD760016C335 /* UIKit.framework */; };
+		2599774014BFAD760016C335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599773F14BFAD760016C335 /* Foundation.framework */; };
+		2599774214BFAD760016C335 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599774114BFAD760016C335 /* CoreGraphics.framework */; };
+		2599774414BFAD760016C335 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599774314BFAD760016C335 /* CoreData.framework */; };
+		2599774A14BFAD760016C335 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2599774814BFAD760016C335 /* InfoPlist.strings */; };
+		2599774C14BFAD760016C335 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599774B14BFAD760016C335 /* main.m */; };
+		2599775014BFAD760016C335 /* KZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599774F14BFAD760016C335 /* KZAppDelegate.m */; };
+		2599775314BFAD770016C335 /* Kinotaf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2599775114BFAD770016C335 /* Kinotaf.xcdatamodeld */; };
+		2599775B14BFAD770016C335 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599775A14BFAD770016C335 /* SenTestingKit.framework */; };
+		2599775C14BFAD770016C335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599773D14BFAD760016C335 /* UIKit.framework */; };
+		2599775D14BFAD770016C335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599773F14BFAD760016C335 /* Foundation.framework */; };
+		2599775E14BFAD770016C335 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599774314BFAD760016C335 /* CoreData.framework */; };
+		2599776614BFAD770016C335 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2599776414BFAD770016C335 /* InfoPlist.strings */; };
+		2599776914BFAD770016C335 /* KinotafTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599776814BFAD770016C335 /* KinotafTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2599775F14BFAD770016C335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2599773014BFAD760016C335 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2599773814BFAD760016C335;
+			remoteInfo = Kinotaf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2599773914BFAD760016C335 /* Kinotaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kinotaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2599773D14BFAD760016C335 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2599773F14BFAD760016C335 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2599774114BFAD760016C335 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2599774314BFAD760016C335 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2599774714BFAD760016C335 /* Kinotaf-Info.plist */ = {isa = PBXFileReference; path = "Kinotaf-Info.plist"; sourceTree = "<group>"; };
+		2599774914BFAD760016C335 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2599774B14BFAD760016C335 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2599774D14BFAD760016C335 /* Kinotaf-Prefix.pch */ = {isa = PBXFileReference; path = "Kinotaf-Prefix.pch"; sourceTree = "<group>"; };
+		2599774E14BFAD760016C335 /* KZAppDelegate.h */ = {isa = PBXFileReference; path = KZAppDelegate.h; sourceTree = "<group>"; };
+		2599774F14BFAD760016C335 /* KZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZAppDelegate.m; sourceTree = "<group>"; };
+		2599775214BFAD770016C335 /* Kinotaf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kinotaf.xcdatamodel; sourceTree = "<group>"; };
+		2599775914BFAD770016C335 /* KinotafTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinotafTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2599775A14BFAD770016C335 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2599776314BFAD770016C335 /* KinotafTests-Info.plist */ = {isa = PBXFileReference; path = "KinotafTests-Info.plist"; sourceTree = "<group>"; };
+		2599776514BFAD770016C335 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2599776714BFAD770016C335 /* KinotafTests.h */ = {isa = PBXFileReference; path = KinotafTests.h; sourceTree = "<group>"; };
+		2599776814BFAD770016C335 /* KinotafTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinotafTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2599773614BFAD760016C335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2599773E14BFAD760016C335 /* UIKit.framework in Frameworks */,
+				2599774014BFAD760016C335 /* Foundation.framework in Frameworks */,
+				2599774214BFAD760016C335 /* CoreGraphics.framework in Frameworks */,
+				2599774414BFAD760016C335 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2599775514BFAD770016C335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2599775B14BFAD770016C335 /* SenTestingKit.framework in Frameworks */,
+				2599775C14BFAD770016C335 /* UIKit.framework in Frameworks */,
+				2599775D14BFAD770016C335 /* Foundation.framework in Frameworks */,
+				2599775E14BFAD770016C335 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2599772E14BFAD760016C335 = {
+			isa = PBXGroup;
+			children = (
+				2599774514BFAD760016C335 /* Kinotaf */,
+				2599776114BFAD770016C335 /* KinotafTests */,
+				2599773C14BFAD760016C335 /* Frameworks */,
+				2599773A14BFAD760016C335 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2599773A14BFAD760016C335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2599773914BFAD760016C335 /* Kinotaf.app */,
+				2599775914BFAD770016C335 /* KinotafTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2599773C14BFAD760016C335 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2599773D14BFAD760016C335 /* UIKit.framework */,
+				2599773F14BFAD760016C335 /* Foundation.framework */,
+				2599774114BFAD760016C335 /* CoreGraphics.framework */,
+				2599774314BFAD760016C335 /* CoreData.framework */,
+				2599775A14BFAD770016C335 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2599774514BFAD760016C335 /* Kinotaf */ = {
+			isa = PBXGroup;
+			children = (
+				2599774E14BFAD760016C335 /* KZAppDelegate.h */,
+				2599774F14BFAD760016C335 /* KZAppDelegate.m */,
+				2599775114BFAD770016C335 /* Kinotaf.xcdatamodeld */,
+				2599774614BFAD760016C335 /* Supporting Files */,
+			);
+			path = Kinotaf;
+			sourceTree = "<group>";
+		};
+		2599774614BFAD760016C335 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2599774714BFAD760016C335 /* Kinotaf-Info.plist */,
+				2599774814BFAD760016C335 /* InfoPlist.strings */,
+				2599774B14BFAD760016C335 /* main.m */,
+				2599774D14BFAD760016C335 /* Kinotaf-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2599776114BFAD770016C335 /* KinotafTests */ = {
+			isa = PBXGroup;
+			children = (
+				2599776714BFAD770016C335 /* KinotafTests.h */,
+				2599776814BFAD770016C335 /* KinotafTests.m */,
+				2599776214BFAD770016C335 /* Supporting Files */,
+			);
+			path = KinotafTests;
+			sourceTree = "<group>";
+		};
+		2599776214BFAD770016C335 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2599776314BFAD770016C335 /* KinotafTests-Info.plist */,
+				2599776414BFAD770016C335 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2599773814BFAD760016C335 /* Kinotaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2599776C14BFAD770016C335 /* Build configuration list for PBXNativeTarget "Kinotaf" */;
+			buildPhases = (
+				2599773514BFAD760016C335 /* Sources */,
+				2599773614BFAD760016C335 /* Frameworks */,
+				2599773714BFAD760016C335 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kinotaf;
+			productName = Kinotaf;
+			productReference = 2599773914BFAD760016C335 /* Kinotaf.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2599775814BFAD770016C335 /* KinotafTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2599776F14BFAD770016C335 /* Build configuration list for PBXNativeTarget "KinotafTests" */;
+			buildPhases = (
+				2599775414BFAD770016C335 /* Sources */,
+				2599775514BFAD770016C335 /* Frameworks */,
+				2599775614BFAD770016C335 /* Resources */,
+				2599775714BFAD770016C335 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2599776014BFAD770016C335 /* PBXTargetDependency */,
+			);
+			name = KinotafTests;
+			productName = KinotafTests;
+			productReference = 2599775914BFAD770016C335 /* KinotafTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2599773014BFAD760016C335 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2599773314BFAD760016C335 /* Build configuration list for PBXProject "Kinotaf" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2599772E14BFAD760016C335;
+			productRefGroup = 2599773A14BFAD760016C335 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2599773814BFAD760016C335 /* Kinotaf */,
+				2599775814BFAD770016C335 /* KinotafTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2599773714BFAD760016C335 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2599774A14BFAD760016C335 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2599775614BFAD770016C335 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2599776614BFAD770016C335 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2599775714BFAD770016C335 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2599773514BFAD760016C335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2599774C14BFAD760016C335 /* main.m in Sources */,
+				2599775014BFAD760016C335 /* KZAppDelegate.m in Sources */,
+				2599775314BFAD770016C335 /* Kinotaf.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2599775414BFAD770016C335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2599776914BFAD770016C335 /* KinotafTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2599776014BFAD770016C335 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2599773814BFAD760016C335 /* Kinotaf */;
+			targetProxy = 2599775F14BFAD770016C335 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2599774814BFAD760016C335 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2599774914BFAD760016C335 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2599776414BFAD770016C335 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2599776514BFAD770016C335 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2599776A14BFAD770016C335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2599776B14BFAD770016C335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2599776D14BFAD770016C335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kinotaf/Kinotaf-Prefix.pch";
+				INFOPLIST_FILE = "Kinotaf/Kinotaf-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2599776E14BFAD770016C335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kinotaf/Kinotaf-Prefix.pch";
+				INFOPLIST_FILE = "Kinotaf/Kinotaf-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2599777014BFAD770016C335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kinotaf.app/Kinotaf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kinotaf/Kinotaf-Prefix.pch";
+				INFOPLIST_FILE = "KinotafTests/KinotafTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2599777114BFAD770016C335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kinotaf.app/Kinotaf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kinotaf/Kinotaf-Prefix.pch";
+				INFOPLIST_FILE = "KinotafTests/KinotafTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2599773314BFAD760016C335 /* Build configuration list for PBXProject "Kinotaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2599776A14BFAD770016C335 /* Debug */,
+				2599776B14BFAD770016C335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2599776C14BFAD770016C335 /* Build configuration list for PBXNativeTarget "Kinotaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2599776D14BFAD770016C335 /* Debug */,
+				2599776E14BFAD770016C335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2599776F14BFAD770016C335 /* Build configuration list for PBXNativeTarget "KinotafTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2599777014BFAD770016C335 /* Debug */,
+				2599777114BFAD770016C335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2599775114BFAD770016C335 /* Kinotaf.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2599775214BFAD770016C335 /* Kinotaf.xcdatamodel */,
+			);
+			currentVersion = 2599775214BFAD770016C335 /* Kinotaf.xcdatamodel */;
+			path = Kinotaf.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2599773014BFAD760016C335 /* Project object */;
+}
