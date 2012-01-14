@@ -23,6 +23,7 @@
 		2599776914BFAD770016C335 /* KinotafTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599776814BFAD770016C335 /* KinotafTests.m */; };
 		2599777D14C0E0400016C335 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599777B14C0E0400016C335 /* RootVC.m */; };
 		2599777E14C0E0400016C335 /* RootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599777C14C0E0400016C335 /* RootVC.xib */; };
+		2599778014C104650016C335 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2599777F14C104650016C335 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2599777A14C0E0400016C335 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
 		2599777B14C0E0400016C335 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
 		2599777C14C0E0400016C335 /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
+		2599777F14C104650016C335 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		2599774614BFAD760016C335 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2599777F14C104650016C335 /* README.txt */,
 				2599774714BFAD760016C335 /* Kinotaf-Info.plist */,
 				2599774814BFAD760016C335 /* InfoPlist.strings */,
 				2599774B14BFAD760016C335 /* main.m */,
@@ -232,6 +235,7 @@
 			files = (
 				2599774A14BFAD760016C335 /* InfoPlist.strings in Resources */,
 				2599777E14C0E0400016C335 /* RootVC.xib in Resources */,
+				2599778014C104650016C335 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
