@@ -21,6 +21,8 @@
 		2599775E14BFAD770016C335 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2599774314BFAD760016C335 /* CoreData.framework */; };
 		2599776614BFAD770016C335 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2599776414BFAD770016C335 /* InfoPlist.strings */; };
 		2599776914BFAD770016C335 /* KinotafTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599776814BFAD770016C335 /* KinotafTests.m */; };
+		2599777D14C0E0400016C335 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599777B14C0E0400016C335 /* RootVC.m */; };
+		2599777E14C0E0400016C335 /* RootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599777C14C0E0400016C335 /* RootVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		2599776514BFAD770016C335 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2599776714BFAD770016C335 /* KinotafTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinotafTests.h; sourceTree = "<group>"; };
 		2599776814BFAD770016C335 /* KinotafTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinotafTests.m; sourceTree = "<group>"; };
+		2599777A14C0E0400016C335 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
+		2599777B14C0E0400016C335 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
+		2599777C14C0E0400016C335 /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,9 @@
 			children = (
 				2599774E14BFAD760016C335 /* KZAppDelegate.h */,
 				2599774F14BFAD760016C335 /* KZAppDelegate.m */,
+				2599777A14C0E0400016C335 /* RootVC.h */,
+				2599777B14C0E0400016C335 /* RootVC.m */,
+				2599777C14C0E0400016C335 /* RootVC.xib */,
 				2599775114BFAD770016C335 /* Kinotaf.xcdatamodeld */,
 				2599774614BFAD760016C335 /* Supporting Files */,
 			);
@@ -223,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2599774A14BFAD760016C335 /* InfoPlist.strings in Resources */,
+				2599777E14C0E0400016C335 /* RootVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				2599774C14BFAD760016C335 /* main.m in Sources */,
 				2599775014BFAD760016C335 /* KZAppDelegate.m in Sources */,
 				2599775314BFAD770016C335 /* Kinotaf.xcdatamodeld in Sources */,
+				2599777D14C0E0400016C335 /* RootVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +431,7 @@
 				2599776E14BFAD770016C335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2599776F14BFAD770016C335 /* Build configuration list for PBXNativeTarget "KinotafTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +440,7 @@
 				2599777114BFAD770016C335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

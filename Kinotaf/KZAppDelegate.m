@@ -8,9 +8,13 @@
 
 #import "KZAppDelegate.h"
 
+#import "RootVC.h"
+
 @implementation KZAppDelegate
 
 @synthesize window = _window;
+@synthesize nc = _nc;
+
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
@@ -18,16 +22,32 @@
 - (void)dealloc
 {
 	[_window release];
+	[_nc release];
+	
 	[__managedObjectContext release];
 	[__managedObjectModel release];
 	[__persistentStoreCoordinator release];
+	
     [super dealloc];
+}
+
+- (UINavigationController*) nc
+{
+	if (!_nc) { _nc = [[UINavigationController alloc] init]; }
+	return _nc;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+	
+	RootVC* root = [[RootVC alloc] initWithNibName:@"RootVC" bundle:nil];
+
+	UINavigationController* nc = self.nc;
+	[nc pushViewController:root animated:NO];
+	[self.window addSubview:nc.view];
+	
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
