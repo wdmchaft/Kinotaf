@@ -24,6 +24,14 @@
 		2599777D14C0E0400016C335 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599777B14C0E0400016C335 /* RootVC.m */; };
 		2599777E14C0E0400016C335 /* RootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599777C14C0E0400016C335 /* RootVC.xib */; };
 		2599778014C104650016C335 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2599777F14C104650016C335 /* README.txt */; };
+		2599778414C266820016C335 /* LibraryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599778214C266810016C335 /* LibraryVC.m */; };
+		2599778514C266820016C335 /* LibraryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599778314C266810016C335 /* LibraryVC.xib */; };
+		2599778914C266BA0016C335 /* JournalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599778714C266BA0016C335 /* JournalVC.m */; };
+		2599778A14C266BA0016C335 /* JournalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599778814C266BA0016C335 /* JournalVC.xib */; };
+		2599779014C26E950016C335 /* DeadEndVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599778E14C26E950016C335 /* DeadEndVC.m */; };
+		2599779114C26E950016C335 /* DeadEndVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599778F14C26E950016C335 /* DeadEndVC.xib */; };
+		2599779514C2701A0016C335 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599779314C2701A0016C335 /* AboutVC.m */; };
+		2599779614C2701A0016C335 /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599779414C2701A0016C335 /* AboutVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,18 @@
 		2599777B14C0E0400016C335 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
 		2599777C14C0E0400016C335 /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
 		2599777F14C104650016C335 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
+		2599778114C266810016C335 /* LibraryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryVC.h; sourceTree = "<group>"; };
+		2599778214C266810016C335 /* LibraryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryVC.m; sourceTree = "<group>"; };
+		2599778314C266810016C335 /* LibraryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryVC.xib; sourceTree = "<group>"; };
+		2599778614C266BA0016C335 /* JournalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalVC.h; sourceTree = "<group>"; };
+		2599778714C266BA0016C335 /* JournalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalVC.m; sourceTree = "<group>"; };
+		2599778814C266BA0016C335 /* JournalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalVC.xib; sourceTree = "<group>"; };
+		2599778D14C26E950016C335 /* DeadEndVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeadEndVC.h; sourceTree = "<group>"; };
+		2599778E14C26E950016C335 /* DeadEndVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeadEndVC.m; sourceTree = "<group>"; };
+		2599778F14C26E950016C335 /* DeadEndVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeadEndVC.xib; sourceTree = "<group>"; };
+		2599779214C2701A0016C335 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
+		2599779314C2701A0016C335 /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
+		2599779414C2701A0016C335 /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +141,10 @@
 		2599774514BFAD760016C335 /* Kinotaf */ = {
 			isa = PBXGroup;
 			children = (
+				2599778C14C26E690016C335 /* Controllers */,
+				2599778B14C266D70016C335 /* Xibs */,
 				2599774E14BFAD760016C335 /* KZAppDelegate.h */,
 				2599774F14BFAD760016C335 /* KZAppDelegate.m */,
-				2599777A14C0E0400016C335 /* RootVC.h */,
-				2599777B14C0E0400016C335 /* RootVC.m */,
-				2599777C14C0E0400016C335 /* RootVC.xib */,
 				2599775114BFAD770016C335 /* Kinotaf.xcdatamodeld */,
 				2599774614BFAD760016C335 /* Supporting Files */,
 			);
@@ -161,6 +180,35 @@
 				2599776414BFAD770016C335 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2599778B14C266D70016C335 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				2599779414C2701A0016C335 /* AboutVC.xib */,
+				2599778F14C26E950016C335 /* DeadEndVC.xib */,
+				2599778814C266BA0016C335 /* JournalVC.xib */,
+				2599778314C266810016C335 /* LibraryVC.xib */,
+				2599777C14C0E0400016C335 /* RootVC.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		2599778C14C26E690016C335 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2599779214C2701A0016C335 /* AboutVC.h */,
+				2599779314C2701A0016C335 /* AboutVC.m */,
+				2599778D14C26E950016C335 /* DeadEndVC.h */,
+				2599778E14C26E950016C335 /* DeadEndVC.m */,
+				2599778614C266BA0016C335 /* JournalVC.h */,
+				2599778714C266BA0016C335 /* JournalVC.m */,
+				2599778114C266810016C335 /* LibraryVC.h */,
+				2599778214C266810016C335 /* LibraryVC.m */,
+				2599777A14C0E0400016C335 /* RootVC.h */,
+				2599777B14C0E0400016C335 /* RootVC.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +284,10 @@
 				2599774A14BFAD760016C335 /* InfoPlist.strings in Resources */,
 				2599777E14C0E0400016C335 /* RootVC.xib in Resources */,
 				2599778014C104650016C335 /* README.txt in Resources */,
+				2599778514C266820016C335 /* LibraryVC.xib in Resources */,
+				2599778A14C266BA0016C335 /* JournalVC.xib in Resources */,
+				2599779114C26E950016C335 /* DeadEndVC.xib in Resources */,
+				2599779614C2701A0016C335 /* AboutVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +326,10 @@
 				2599775014BFAD760016C335 /* KZAppDelegate.m in Sources */,
 				2599775314BFAD770016C335 /* Kinotaf.xcdatamodeld in Sources */,
 				2599777D14C0E0400016C335 /* RootVC.m in Sources */,
+				2599778414C266820016C335 /* LibraryVC.m in Sources */,
+				2599778914C266BA0016C335 /* JournalVC.m in Sources */,
+				2599779014C26E950016C335 /* DeadEndVC.m in Sources */,
+				2599779514C2701A0016C335 /* AboutVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

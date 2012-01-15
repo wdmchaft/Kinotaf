@@ -8,6 +8,11 @@
 
 #import "RootVC.h"
 
+#import "JournalVC.h"
+#import "AboutVC.h"
+#import "DeadEndVC.h"
+#import "LibraryVC.h"
+
 @interface RootVC()
 @property (assign, nonatomic) CGFloat hue;
 @end
@@ -17,7 +22,20 @@
 @synthesize duckButton;
 @synthesize deadEndButton;
 @synthesize ljButton;
+@synthesize continueButton;
+@synthesize freshButton;
+@synthesize libraryButton;
 @synthesize hue = hue_;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (!self) { return nil; }
+
+	self.title = @"Главная";
+	
+	return self;
+}
 
 #pragma mark - View lifecycle
 
@@ -28,7 +46,7 @@
 	if (hue_ == hue) { return; }
 	hue_ = hue;
 	
-	self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:hue_ saturation:1.0 brightness:1.0 alpha:1.0];
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:hue_ saturation:1.0 brightness:0.6 alpha:1.0];
 }
 
 - (void)increaseHue {
@@ -43,7 +61,6 @@
 {
     [super viewDidLoad];
 	
-	self.title = @"Главная";
 	self.hue = 0.5;
 }
 
@@ -53,6 +70,9 @@
 	[self setDuckButton:nil];
 	[self setDeadEndButton:nil];
 	[self setLjButton:nil];
+	[self setContinueButton:nil];
+	[self setFreshButton:nil];
+	[self setLibraryButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -68,22 +88,71 @@
 	[duckButton release];
 	[deadEndButton release];
 	[ljButton release];
+	[continueButton release];
+	[freshButton release];
+	[libraryButton release];
 	[super dealloc];
 }
-- (IBAction)ljButtonPressed:(id)sender {
+
+- (IBAction)ljButtonPressed:(id)sender 
+{
+	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+	
 	[self increaseHue];
 }
 
-- (IBAction)deadEndButtonPressed:(id)sender {
+- (IBAction)deadEndButtonPressed:(id)sender 
+{
+	DeadEndVC *vc = [[DeadEndVC alloc] initWithNibName:@"DeadEndVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+
 	[self decreaseHue];
 }
 
-- (IBAction)duckButtonPressed:(id)sender {
+- (IBAction)duckButtonPressed:(id)sender 
+{
+	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+	
 	[self increaseHue];
 }
 
 - (IBAction)infoButtonPressed:(id)sender {
+	AboutVC *vc = [[AboutVC alloc] initWithNibName:@"AboutVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+	
 	[self decreaseHue];
+}
+
+- (IBAction)freshButtonPressed:(id)sender 
+{
+	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+	
+	[self increaseHue];
+}
+
+- (IBAction)continueButtonPressed:(id)sender 
+{
+	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];	
+	
+	[self decreaseHue];
+}
+
+- (IBAction)libraryButtonPressed:(id)sender {
+	LibraryVC *vc = [[LibraryVC alloc] initWithNibName:@"LibraryVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];	
+	
+	[self increaseHue];
 }
 
 @end

@@ -14,10 +14,16 @@
 @property (retain, nonatomic) IBOutlet UIButton *duckButton;
 @property (retain, nonatomic) IBOutlet UIButton *deadEndButton;
 @property (retain, nonatomic) IBOutlet UIButton *ljButton;
+@property (retain, nonatomic) IBOutlet UIButton *continueButton;
+@property (retain, nonatomic) IBOutlet UIButton *freshButton;
+@property (retain, nonatomic) IBOutlet UIButton *libraryButton;
 
 - (IBAction)ljButtonPressed:(id)sender;
 - (IBAction)deadEndButtonPressed:(id)sender;
 - (IBAction)duckButtonPressed:(id)sender;
 - (IBAction)infoButtonPressed:(id)sender;
+- (IBAction)freshButtonPressed:(id)sender;
+- (IBAction)continueButtonPressed:(id)sender;
+- (IBAction)libraryButtonPressed:(id)sender;
 
 @end
