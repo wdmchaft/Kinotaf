@@ -32,6 +32,8 @@
 		2599779114C26E950016C335 /* DeadEndVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599778F14C26E950016C335 /* DeadEndVC.xib */; };
 		2599779514C2701A0016C335 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599779314C2701A0016C335 /* AboutVC.m */; };
 		2599779614C2701A0016C335 /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599779414C2701A0016C335 /* AboutVC.xib */; };
+		259977A314C684890016C335 /* LJLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 259977A214C684890016C335 /* LJLoader.m */; };
+		259977E314C7B87C0016C335 /* libXMLRPC_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2599773814BFAD760016C335;
 			remoteInfo = Kinotaf;
+		};
+		259977DF14C7B2C40016C335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "XMLRPC-iOS";
+		};
+		259977E114C7B8680016C335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = "XMLRPC-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -79,6 +95,9 @@
 		2599779214C2701A0016C335 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
 		2599779314C2701A0016C335 /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
 		2599779414C2701A0016C335 /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
+		259977A114C684890016C335 /* LJLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLoader.h; sourceTree = "<group>"; };
+		259977A214C684890016C335 /* LJLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLoader.m; sourceTree = "<group>"; };
+		259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "XMLRPC-iOS.xcodeproj"; path = "xmlrpc/XMLRPC-iOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259977E314C7B87C0016C335 /* libXMLRPC_iOS.a in Frameworks */,
 				2599773E14BFAD760016C335 /* UIKit.framework in Frameworks */,
 				2599774014BFAD760016C335 /* Foundation.framework in Frameworks */,
 				2599774214BFAD760016C335 /* CoreGraphics.framework in Frameworks */,
@@ -110,6 +130,7 @@
 		2599772E14BFAD760016C335 = {
 			isa = PBXGroup;
 			children = (
+				259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */,
 				2599774514BFAD760016C335 /* Kinotaf */,
 				2599776114BFAD770016C335 /* KinotafTests */,
 				2599773C14BFAD760016C335 /* Frameworks */,
@@ -141,6 +162,7 @@
 		2599774514BFAD760016C335 /* Kinotaf */ = {
 			isa = PBXGroup;
 			children = (
+				2599779F14C684630016C335 /* Data */,
 				2599778C14C26E690016C335 /* Controllers */,
 				2599778B14C266D70016C335 /* Xibs */,
 				2599774E14BFAD760016C335 /* KZAppDelegate.h */,
@@ -211,6 +233,23 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		2599779F14C684630016C335 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				259977A114C684890016C335 /* LJLoader.h */,
+				259977A214C684890016C335 /* LJLoader.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		259977D914C7B2C40016C335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,6 +264,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				259977E214C7B8680016C335 /* PBXTargetDependency */,
 			);
 			name = Kinotaf;
 			productName = Kinotaf;
@@ -268,6 +308,12 @@
 			mainGroup = 2599772E14BFAD760016C335;
 			productRefGroup = 2599773A14BFAD760016C335 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 259977D914C7B2C40016C335 /* Products */;
+					ProjectRef = 259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2599773814BFAD760016C335 /* Kinotaf */,
@@ -275,6 +321,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXMLRPC_iOS.a;
+			remoteRef = 259977DF14C7B2C40016C335 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2599773714BFAD760016C335 /* Resources */ = {
@@ -330,6 +386,7 @@
 				2599778914C266BA0016C335 /* JournalVC.m in Sources */,
 				2599779014C26E950016C335 /* DeadEndVC.m in Sources */,
 				2599779514C2701A0016C335 /* AboutVC.m in Sources */,
+				259977A314C684890016C335 /* LJLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +405,11 @@
 			isa = PBXTargetDependency;
 			target = 2599773814BFAD760016C335 /* Kinotaf */;
 			targetProxy = 2599775F14BFAD770016C335 /* PBXContainerItemProxy */;
+		};
+		259977E214C7B8680016C335 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XMLRPC-iOS";
+			targetProxy = 259977E114C7B8680016C335 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,6 +485,7 @@
 				GCC_PREFIX_HEADER = "Kinotaf/Kinotaf-Prefix.pch";
 				INFOPLIST_FILE = "Kinotaf/Kinotaf-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = xmlrpc;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -434,6 +497,7 @@
 				GCC_PREFIX_HEADER = "Kinotaf/Kinotaf-Prefix.pch";
 				INFOPLIST_FILE = "Kinotaf/Kinotaf-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = xmlrpc;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

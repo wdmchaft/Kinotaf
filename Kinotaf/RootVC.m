@@ -13,7 +13,12 @@
 #import "DeadEndVC.h"
 #import "LibraryVC.h"
 
+#import "LJLoader.h"
+
 @interface RootVC()
+{
+	LJLoader *loader_;
+}
 @property (assign, nonatomic) CGFloat hue;
 @end
 
@@ -32,6 +37,7 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (!self) { return nil; }
 
+	loader_ = [[LJLoader alloc] init];
 	self.title = @"Главная";
 	
 	return self;
@@ -66,13 +72,13 @@
 
 - (void)viewDidUnload
 {
-	[self setInfoButton:nil];
-	[self setDuckButton:nil];
-	[self setDeadEndButton:nil];
-	[self setLjButton:nil];
+	[self setInfoButton:	nil];
+	[self setDuckButton:	nil];
+	[self setDeadEndButton:	nil];
+	[self setLjButton:		nil];
 	[self setContinueButton:nil];
-	[self setFreshButton:nil];
-	[self setLibraryButton:nil];
+	[self setFreshButton:	nil];
+	[self setLibraryButton:	nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -96,9 +102,11 @@
 
 - (IBAction)ljButtonPressed:(id)sender 
 {
-	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
+//	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+//	[self.navigationController pushViewController:vc animated:YES];
+//	[vc release];
+	
+	[loader_ start];
 	
 	[self increaseHue];
 }
