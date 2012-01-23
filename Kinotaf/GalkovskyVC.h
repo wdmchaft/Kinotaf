@@ -11,5 +11,6 @@
 @interface GalkovskyVC : UIViewController
 @property (retain, nonatomic) IBOutlet UIButton *backButton;
 - (IBAction)backButtonPressed:(id)sender;
+- (IBAction)deadEndPressed;
 
 @end

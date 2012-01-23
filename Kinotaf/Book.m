@@ -1,17 +1,14 @@
 //
-//  GalkovskyVC.m
+//  Book.m
 //  Kinotaf
 //
 //  Created by Константин Забелин on 23.01.12.
 //  Copyright (c) 2012 Zababako. All rights reserved.
 //
 
-#import "GalkovskyVC.h"
-
 #import "Book.h"
 
-@implementation GalkovskyVC
-@synthesize backButton;
+@implementation Book
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +37,6 @@
 
 - (void)viewDidUnload
 {
-	[self setBackButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -52,17 +48,7 @@
 	return YES;
 }
 
-- (void)dealloc {
-	[backButton release];
-	[super dealloc];
-}
-- (IBAction)backButtonPressed:(id)sender {
+- (IBAction)backButtonPressed {
 	[self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)deadEndPressed {
-	Book* vc = [[Book alloc] initWithNibName:@"Book" bundle:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
 }
 @end

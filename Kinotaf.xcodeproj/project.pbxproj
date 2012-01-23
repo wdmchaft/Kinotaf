@@ -36,6 +36,16 @@
 		259977E314C7B87C0016C335 /* libXMLRPC_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */; };
 		25A5DA4B14CD277B0037F886 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5DA4914CD277B0037F886 /* Search.m */; };
 		25A5DA4C14CD277B0037F886 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA4A14CD277B0037F886 /* Search.xib */; };
+		25A5DA5014CD2E5F0037F886 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5DA4E14CD2E5F0037F886 /* Book.m */; };
+		25A5DA5114CD2E5F0037F886 /* Book.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA4F14CD2E5F0037F886 /* Book.xib */; };
+		25A5DA6014CD2F190037F886 /* utkorech.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5514CD2F190037F886 /* utkorech.jpg */; };
+		25A5DA6114CD2F190037F886 /* kompas1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5614CD2F190037F886 /* kompas1.gif */; };
+		25A5DA6214CD2F190037F886 /* razbitii_kompas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5714CD2F190037F886 /* razbitii_kompas.jpg */; };
+		25A5DA6314CD2F190037F886 /* dva_idiota2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5814CD2F190037F886 /* dva_idiota2.JPG */; };
+		25A5DA6414CD2F190037F886 /* dva_idiota.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5914CD2F190037F886 /* dva_idiota.JPG */; };
+		25A5DA6514CD2F190037F886 /* propaganda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5A14CD2F190037F886 /* propaganda.jpg */; };
+		25A5DA6614CD2F190037F886 /* Magnit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5B14CD2F190037F886 /* Magnit.jpg */; };
+		25A5DA6814CD2F190037F886 /* beskonechniy_tupik3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5D14CD2F190037F886 /* beskonechniy_tupik3.jpg */; };
 		25B1D68F14CCE58B00227FC0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68714CCE58A00227FC0 /* about.png */; };
 		25B1D69014CCE58B00227FC0 /* book-lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68814CCE58A00227FC0 /* book-lib.png */; };
 		25B1D69114CCE58B00227FC0 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68914CCE58A00227FC0 /* book.png */; };
@@ -126,6 +136,17 @@
 		25A5DA4814CD277B0037F886 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		25A5DA4914CD277B0037F886 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		25A5DA4A14CD277B0037F886 /* Search.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
+		25A5DA4D14CD2E5F0037F886 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		25A5DA4E14CD2E5F0037F886 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		25A5DA4F14CD2E5F0037F886 /* Book.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Book.xib; sourceTree = "<group>"; };
+		25A5DA5514CD2F190037F886 /* utkorech.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = utkorech.jpg; sourceTree = "<group>"; };
+		25A5DA5614CD2F190037F886 /* kompas1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kompas1.gif; sourceTree = "<group>"; };
+		25A5DA5714CD2F190037F886 /* razbitii_kompas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = razbitii_kompas.jpg; sourceTree = "<group>"; };
+		25A5DA5814CD2F190037F886 /* dva_idiota2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dva_idiota2.JPG; sourceTree = "<group>"; };
+		25A5DA5914CD2F190037F886 /* dva_idiota.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dva_idiota.JPG; sourceTree = "<group>"; };
+		25A5DA5A14CD2F190037F886 /* propaganda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = propaganda.jpg; sourceTree = "<group>"; };
+		25A5DA5B14CD2F190037F886 /* Magnit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Magnit.jpg; sourceTree = "<group>"; };
+		25A5DA5D14CD2F190037F886 /* beskonechniy_tupik3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beskonechniy_tupik3.jpg; sourceTree = "<group>"; };
 		25B1D68714CCE58A00227FC0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Graphics/Backgrounds/about.png; sourceTree = "<group>"; };
 		25B1D68814CCE58A00227FC0 /* book-lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "book-lib.png"; path = "Graphics/Backgrounds/book-lib.png"; sourceTree = "<group>"; };
 		25B1D68914CCE58A00227FC0 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = book.png; path = Graphics/Backgrounds/book.png; sourceTree = "<group>"; };
@@ -262,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				2599779414C2701A0016C335 /* AboutVC.xib */,
+				25A5DA4F14CD2E5F0037F886 /* Book.xib */,
 				2599778F14C26E950016C335 /* DeadEndVC.xib */,
 				25B1D6A614CCFE4F00227FC0 /* GalkovskyVC.xib */,
 				2599778814C266BA0016C335 /* JournalVC.xib */,
@@ -278,6 +300,8 @@
 			children = (
 				2599779214C2701A0016C335 /* AboutVC.h */,
 				2599779314C2701A0016C335 /* AboutVC.m */,
+				25A5DA4D14CD2E5F0037F886 /* Book.h */,
+				25A5DA4E14CD2E5F0037F886 /* Book.m */,
 				2599778D14C26E950016C335 /* DeadEndVC.h */,
 				2599778E14C26E950016C335 /* DeadEndVC.m */,
 				25B1D6A414CCFE4F00227FC0 /* GalkovskyVC.h */,
@@ -313,9 +337,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		25A5DA5214CD2EFE0037F886 /* Covers */ = {
+			isa = PBXGroup;
+			children = (
+				25A5DA5514CD2F190037F886 /* utkorech.jpg */,
+				25A5DA5614CD2F190037F886 /* kompas1.gif */,
+				25A5DA5714CD2F190037F886 /* razbitii_kompas.jpg */,
+				25A5DA5814CD2F190037F886 /* dva_idiota2.JPG */,
+				25A5DA5914CD2F190037F886 /* dva_idiota.JPG */,
+				25A5DA5A14CD2F190037F886 /* propaganda.jpg */,
+				25A5DA5B14CD2F190037F886 /* Magnit.jpg */,
+				25A5DA5D14CD2F190037F886 /* beskonechniy_tupik3.jpg */,
+			);
+			name = Covers;
+			sourceTree = "<group>";
+		};
 		25B1D68614CCE56900227FC0 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				25A5DA5214CD2EFE0037F886 /* Covers */,
 				25B1D6A014CCEE5C00227FC0 /* back_yellow.png */,
 				25B1D6A114CCEE5C00227FC0 /* back_orange.png */,
 				25B1D69B14CCEE1400227FC0 /* Backgrounds */,
@@ -471,6 +511,15 @@
 				25B1D6BF14CD0E9100227FC0 /* versionAfront.jpg in Resources */,
 				25B1D6C014CD0E9100227FC0 /* svift_dnevnik.jpg in Resources */,
 				25A5DA4C14CD277B0037F886 /* Search.xib in Resources */,
+				25A5DA5114CD2E5F0037F886 /* Book.xib in Resources */,
+				25A5DA6014CD2F190037F886 /* utkorech.jpg in Resources */,
+				25A5DA6114CD2F190037F886 /* kompas1.gif in Resources */,
+				25A5DA6214CD2F190037F886 /* razbitii_kompas.jpg in Resources */,
+				25A5DA6314CD2F190037F886 /* dva_idiota2.JPG in Resources */,
+				25A5DA6414CD2F190037F886 /* dva_idiota.JPG in Resources */,
+				25A5DA6514CD2F190037F886 /* propaganda.jpg in Resources */,
+				25A5DA6614CD2F190037F886 /* Magnit.jpg in Resources */,
+				25A5DA6814CD2F190037F886 /* beskonechniy_tupik3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +566,7 @@
 				25B1D6A714CCFE5000227FC0 /* GalkovskyVC.m in Sources */,
 				25B1D6AC14CD07F100227FC0 /* ReaderVC.m in Sources */,
 				25A5DA4B14CD277B0037F886 /* Search.m in Sources */,
+				25A5DA5014CD2E5F0037F886 /* Book.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
