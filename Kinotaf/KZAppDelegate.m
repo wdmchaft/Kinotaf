@@ -45,6 +45,7 @@
 	RootVC* root = [[RootVC alloc] initWithNibName:@"RootVC" bundle:nil];
 
 	UINavigationController* nc = self.nc;
+	nc.navigationBarHidden = YES;
 	[nc pushViewController:root animated:NO];
 	[self.window addSubview:nc.view];
 	

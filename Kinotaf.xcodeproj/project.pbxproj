@@ -34,6 +34,16 @@
 		2599779614C2701A0016C335 /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599779414C2701A0016C335 /* AboutVC.xib */; };
 		259977A314C684890016C335 /* LJLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 259977A214C684890016C335 /* LJLoader.m */; };
 		259977E314C7B87C0016C335 /* libXMLRPC_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */; };
+		25B1D68F14CCE58B00227FC0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68714CCE58A00227FC0 /* about.png */; };
+		25B1D69014CCE58B00227FC0 /* book-lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68814CCE58A00227FC0 /* book-lib.png */; };
+		25B1D69114CCE58B00227FC0 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68914CCE58A00227FC0 /* book.png */; };
+		25B1D69214CCE58B00227FC0 /* chrono.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68A14CCE58A00227FC0 /* chrono.png */; };
+		25B1D69314CCE58B00227FC0 /* finder.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68B14CCE58A00227FC0 /* finder.png */; };
+		25B1D69414CCE58B00227FC0 /* galkovsky.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68C14CCE58B00227FC0 /* galkovsky.png */; };
+		25B1D69514CCE58B00227FC0 /* index.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68D14CCE58B00227FC0 /* index.png */; };
+		25B1D69614CCE58B00227FC0 /* lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68E14CCE58B00227FC0 /* lib.png */; };
+		25B1D6A214CCEE5C00227FC0 /* back_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6A014CCEE5C00227FC0 /* back_yellow.png */; };
+		25B1D6A314CCEE5C00227FC0 /* back_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6A114CCEE5C00227FC0 /* back_orange.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +108,16 @@
 		259977A114C684890016C335 /* LJLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLoader.h; sourceTree = "<group>"; };
 		259977A214C684890016C335 /* LJLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLoader.m; sourceTree = "<group>"; };
 		259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "XMLRPC-iOS.xcodeproj"; path = "xmlrpc/XMLRPC-iOS.xcodeproj"; sourceTree = "<group>"; };
+		25B1D68714CCE58A00227FC0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Graphics/Backgrounds/about.png; sourceTree = "<group>"; };
+		25B1D68814CCE58A00227FC0 /* book-lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "book-lib.png"; path = "Graphics/Backgrounds/book-lib.png"; sourceTree = "<group>"; };
+		25B1D68914CCE58A00227FC0 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = book.png; path = Graphics/Backgrounds/book.png; sourceTree = "<group>"; };
+		25B1D68A14CCE58A00227FC0 /* chrono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chrono.png; path = Graphics/Backgrounds/chrono.png; sourceTree = "<group>"; };
+		25B1D68B14CCE58A00227FC0 /* finder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finder.png; path = Graphics/Backgrounds/finder.png; sourceTree = "<group>"; };
+		25B1D68C14CCE58B00227FC0 /* galkovsky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = galkovsky.png; path = Graphics/Backgrounds/galkovsky.png; sourceTree = "<group>"; };
+		25B1D68D14CCE58B00227FC0 /* index.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = index.png; path = Graphics/Backgrounds/index.png; sourceTree = "<group>"; };
+		25B1D68E14CCE58B00227FC0 /* lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lib.png; path = Graphics/Backgrounds/lib.png; sourceTree = "<group>"; };
+		25B1D6A014CCEE5C00227FC0 /* back_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_yellow.png; path = Graphics/back_yellow.png; sourceTree = "<group>"; };
+		25B1D6A114CCEE5C00227FC0 /* back_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_orange.png; path = Graphics/back_orange.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +184,11 @@
 			children = (
 				2599779F14C684630016C335 /* Data */,
 				2599778C14C26E690016C335 /* Controllers */,
-				2599778B14C266D70016C335 /* Xibs */,
 				2599774E14BFAD760016C335 /* KZAppDelegate.h */,
 				2599774F14BFAD760016C335 /* KZAppDelegate.m */,
 				2599775114BFAD770016C335 /* Kinotaf.xcdatamodeld */,
+				2599778B14C266D70016C335 /* Xibs */,
+				25B1D68614CCE56900227FC0 /* Graphics */,
 				2599774614BFAD760016C335 /* Supporting Files */,
 			);
 			path = Kinotaf;
@@ -248,6 +269,31 @@
 				259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		25B1D68614CCE56900227FC0 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				25B1D6A014CCEE5C00227FC0 /* back_yellow.png */,
+				25B1D6A114CCEE5C00227FC0 /* back_orange.png */,
+				25B1D69B14CCEE1400227FC0 /* Backgrounds */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		25B1D69B14CCEE1400227FC0 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				25B1D68714CCE58A00227FC0 /* about.png */,
+				25B1D68814CCE58A00227FC0 /* book-lib.png */,
+				25B1D68914CCE58A00227FC0 /* book.png */,
+				25B1D68A14CCE58A00227FC0 /* chrono.png */,
+				25B1D68B14CCE58A00227FC0 /* finder.png */,
+				25B1D68C14CCE58B00227FC0 /* galkovsky.png */,
+				25B1D68D14CCE58B00227FC0 /* index.png */,
+				25B1D68E14CCE58B00227FC0 /* lib.png */,
+			);
+			name = Backgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +390,16 @@
 				2599778A14C266BA0016C335 /* JournalVC.xib in Resources */,
 				2599779114C26E950016C335 /* DeadEndVC.xib in Resources */,
 				2599779614C2701A0016C335 /* AboutVC.xib in Resources */,
+				25B1D68F14CCE58B00227FC0 /* about.png in Resources */,
+				25B1D69014CCE58B00227FC0 /* book-lib.png in Resources */,
+				25B1D69114CCE58B00227FC0 /* book.png in Resources */,
+				25B1D69214CCE58B00227FC0 /* chrono.png in Resources */,
+				25B1D69314CCE58B00227FC0 /* finder.png in Resources */,
+				25B1D69414CCE58B00227FC0 /* galkovsky.png in Resources */,
+				25B1D69514CCE58B00227FC0 /* index.png in Resources */,
+				25B1D69614CCE58B00227FC0 /* lib.png in Resources */,
+				25B1D6A214CCEE5C00227FC0 /* back_yellow.png in Resources */,
+				25B1D6A314CCEE5C00227FC0 /* back_orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +509,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

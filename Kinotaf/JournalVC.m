@@ -8,13 +8,30 @@
 
 #import "JournalVC.h"
 
+#import "LJLoader.h"
+
+@interface JournalVC()
+{
+	LJLoader *loader_;
+}
+@end
+
 @implementation JournalVC
+@synthesize tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+		UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+																				   target:self
+																				   action:@selector(refresh) ];
+		self.navigationItem.rightBarButtonItem = barButton;
+		[barButton release];
+		
 		self.title = @"Потоковая читалка";
+		
+		loader_ = [[LJLoader alloc] init];
     }
     return self;
 }
@@ -37,6 +54,7 @@
 
 - (void)viewDidUnload
 {
+	[self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -44,8 +62,39 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-	return YES;
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
+
+- (void)dealloc 
+{
+	[tableView release];
+	[loader_ release];
+	[super dealloc];
+}
+
+#pragma mark - Data behavior
+
+- (void)refresh
+{
+	[loader_ start];
+}
+
+#pragma mark - TableView data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return nil;
+}
+
+#pragma mark - TableView delegate
+
+
+
+
 
 @end

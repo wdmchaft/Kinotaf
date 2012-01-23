@@ -13,11 +13,8 @@
 #import "DeadEndVC.h"
 #import "LibraryVC.h"
 
-#import "LJLoader.h"
-
 @interface RootVC()
 {
-	LJLoader *loader_;
 }
 @property (assign, nonatomic) CGFloat hue;
 @end
@@ -32,12 +29,17 @@
 @synthesize libraryButton;
 @synthesize hue = hue_;
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (!self) { return nil; }
 
-	loader_ = [[LJLoader alloc] init];
 	self.title = @"Главная";
 	
 	return self;
@@ -86,7 +88,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return YES;
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 - (void)dealloc {
@@ -102,11 +104,9 @@
 
 - (IBAction)ljButtonPressed:(id)sender 
 {
-//	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
-//	[self.navigationController pushViewController:vc animated:YES];
-//	[vc release];
-	
-	[loader_ start];
+	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
 	
 	[self increaseHue];
 }

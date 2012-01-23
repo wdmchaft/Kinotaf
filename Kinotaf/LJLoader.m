@@ -1,109 +1,92 @@
-//
-//  LJLoader.m
-//  Kinotaf
-//
-//  Created by Константин Забелин on 18.01.12.
-//  Copyright (c) 2012 Zababako. All rights reserved.
-//
+	//
+	//  LJLoader.m
+	//  Kinotaf
+	//
+	//  Created by Константин Забелин on 18.01.12.
+	//  Copyright (c) 2012 Zababako. All rights reserved.
+	//
 
 #import "LJLoader.h"
 
+#import "XMLRPCConnectionManager.h"
+#import "XMLRPCConnection.h"
+#import "XMLRPCRequest.h"
+#import "XMLRPCResponse.h"
+
 @interface LJLoader()
 {
-	NSURLConnection *connection_;
+	XMLRPCRequest *request_;
 	NSMutableData *data_;
 }
-@property (retain, readonly, nonatomic) NSURLConnection *connection;
+@property (retain, readonly, nonatomic) XMLRPCRequest *request;
 @end
 
 @implementation LJLoader
 
 - (void)dealloc
 {
-	[connection_ release];
+	[request_ release];
 	[data_ release];
 	
 	[super dealloc];
 }
 
-- (NSURLConnection *)connection
+- (XMLRPCRequest *)request
 {
-	if (connection_) { return connection_; }
+	if (request_) { return request_; }
 	
-	NSURL* url = [NSURL URLWithString:@"http://www.livejournal.com/interface/flat"];
+	NSURL* url = [NSURL URLWithString:@"http://www.livejournal.com/interface/xmlrpc"];
 	
-	NSString *bodyString = @"mode=getchallenge";
-	NSData* body = [bodyString dataUsingEncoding:NSUTF8StringEncoding];
+	request_ = [[XMLRPCRequest alloc] initWithURL:url];
+	[request_ setMethod:@"LJ.XMLRPC.getchallenge" withParameter:nil];	
 	
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-	[request setHTTPMethod:@"POST"];
-	[request setHTTPBody:body];
-
-	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-	[request setValue:[NSString stringWithFormat:@"%llu", [body length]] forHTTPHeaderField:@"Content-Length"];
+	NSLog(@"Request body: %@", [request_ body]);
 	
-	connection_ = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-	
-	if (connection_) {
-		data_ = [[NSMutableData data] retain];
-	}
-	else {
-		NSLog(@"Couldn't create a connection");
-	}
-	return connection_;
+	return request_;
 }
 
 - (void)start
 {
-	[self.connection start];
+	XMLRPCConnectionManager *manager = [XMLRPCConnectionManager sharedManager];
+	[manager spawnConnectionWithXMLRPCRequest:self.request delegate: self];
 }
 
 #pragma mark - Connection delegate methods
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse *)response;
-	assert([httpResponse isKindOfClass:[NSHTTPURLResponse class]]);
+	NSLog(@"Thread that finishes: %@", [[NSThread currentThread] name]);
+	NSString* result = [[NSString alloc] initWithData:data_ encoding:NSUTF8StringEncoding];
 	
-	NSLog(@"Connection recieved a response with header fields: %@", [httpResponse allHeaderFields]);
-	[data_ setLength:0];
-	
-    if ((httpResponse.statusCode / 100) != 2) {
-		NSLog(@"HTTP error %zd", (ssize_t) httpResponse.statusCode);
+	NSLog(@"Succeeded! Received %d bytes of data, interpretated as a string: %@",[data_ length], result);
+    
+    [request_ release];
+	request_ = nil;
+    [data_ release];
+	data_ = nil;
+}
+
+#pragma mark - XMLRPCConnection delegate
+
+- (void)request:(XMLRPCRequest *)request didReceiveResponse: (XMLRPCResponse *)response
+{	
+	if ([response isFault]) 
+	{
+        NSLog(@"Fault code: %@",   [response faultCode]);
+        NSLog(@"Fault string: %@", [response faultString]);
     } else {
-		NSLog(@"Response OK.");
-    }    
+        NSLog(@"Parsed response: %@", [response object]);
+    }
+	
+    NSLog(@"Response body: %@", [response body]);
+	
+	[data_ setLength:0];
 }
 
-- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse
+- (void)request:(XMLRPCRequest *)request didFailWithError: (NSError *)error
 {
-	NSLog(@"Connection will cache response");
-	return nil;
-}
-
-- (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection
-{
-	NSLog(@"Connection should use credential storage");
-	return NO;
-}
-
-- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
-{
-	NSLog(@"Connection will send request for authentication challenge");
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-	NSLog(@"Connection recieved data: %@", data);
-	[data_ appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-	if (connection != connection_) { return; }
-
-    [connection_ release];
-	connection_ = nil;
+    [request_ release];
+	request_ = nil;
     [data_ release];
 	data_ = nil;
     
@@ -112,17 +95,21 @@
 		  [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+- (BOOL)request:(XMLRPCRequest *)request canAuthenticateAgainstProtectionSpace: (NSURLProtectionSpace *)protectionSpace
 {
-	NSString* result = [[NSString alloc] initWithData:data_ encoding:NSUTF8StringEncoding];
-
-	NSLog(@"Succeeded! Received %d bytes of data, interpretated as a string: %@",[data_ length], result);
-    
-	
-    [connection_ release];
-	connection_ = nil;
-    [data_ release];
-	data_ = nil;
+	NSLog(@"Requset can authenticate against protection space, but NO");
+	return NO;
 }
+
+- (void)request:(XMLRPCRequest *)request didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge
+{
+	NSLog(@"Requst received authentication challenge");
+}
+
+- (void)request: (XMLRPCRequest *)request didCancelAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge
+{
+	NSLog(@"Requst cancelled authentication challenge");
+}
+
 
 @end

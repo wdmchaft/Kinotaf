@@ -10,4 +10,8 @@
 
 @interface AboutVC : UIViewController
 
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
+
+- (IBAction)backButtonPressed:(id)sender;
+
 @end

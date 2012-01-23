@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JournalVC : UIViewController
+@interface JournalVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 
 @end

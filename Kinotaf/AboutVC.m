@@ -9,6 +9,7 @@
 #import "AboutVC.h"
 
 @implementation AboutVC
+@synthesize backButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,7 @@
 
 - (void)viewDidUnload
 {
+	[self setBackButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -44,8 +46,16 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-	return YES;
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+}
+
+- (void)dealloc {
+	[backButton release];
+	[super dealloc];
+}
+
+- (IBAction)backButtonPressed:(id)sender {
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
