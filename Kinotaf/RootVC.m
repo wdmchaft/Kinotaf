@@ -15,6 +15,7 @@
 #import "AboutVC.h"
 #import "GalkovskyVC.h"
 #import "ReaderVC.h"
+#import "Search.h"
 
 @interface RootVC()
 {
@@ -130,6 +131,12 @@
 - (IBAction)galkovskyButtonPressed:(id)sender 
 {
 	GalkovskyVC *vc = [[GalkovskyVC alloc] initWithNibName:@"GalkovskyVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
+}
+
+- (IBAction)searchButtonPressed {
+	Search *vc = [[Search alloc] initWithNibName:@"Search" bundle:nil];
 	[self.navigationController pushViewController:vc animated:YES];
 	[vc release];
 }

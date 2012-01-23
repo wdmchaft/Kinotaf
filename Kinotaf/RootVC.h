@@ -20,5 +20,6 @@
 - (IBAction)continueButtonPressed:(id)sender;
 - (IBAction)libraryButtonPressed:(id)sender;
 - (IBAction)galkovskyButtonPressed:(id)sender;
+- (IBAction)searchButtonPressed;
 
 @end

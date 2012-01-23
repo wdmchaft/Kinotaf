@@ -34,6 +34,8 @@
 		2599779614C2701A0016C335 /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2599779414C2701A0016C335 /* AboutVC.xib */; };
 		259977A314C684890016C335 /* LJLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 259977A214C684890016C335 /* LJLoader.m */; };
 		259977E314C7B87C0016C335 /* libXMLRPC_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 259977E014C7B2C40016C335 /* libXMLRPC_iOS.a */; };
+		25A5DA4B14CD277B0037F886 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5DA4914CD277B0037F886 /* Search.m */; };
+		25A5DA4C14CD277B0037F886 /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA4A14CD277B0037F886 /* Search.xib */; };
 		25B1D68F14CCE58B00227FC0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68714CCE58A00227FC0 /* about.png */; };
 		25B1D69014CCE58B00227FC0 /* book-lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68814CCE58A00227FC0 /* book-lib.png */; };
 		25B1D69114CCE58B00227FC0 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68914CCE58A00227FC0 /* book.png */; };
@@ -121,6 +123,9 @@
 		259977A114C684890016C335 /* LJLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLoader.h; sourceTree = "<group>"; };
 		259977A214C684890016C335 /* LJLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLoader.m; sourceTree = "<group>"; };
 		259977D814C7B2C40016C335 /* XMLRPC-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "XMLRPC-iOS.xcodeproj"; path = "xmlrpc/XMLRPC-iOS.xcodeproj"; sourceTree = "<group>"; };
+		25A5DA4814CD277B0037F886 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
+		25A5DA4914CD277B0037F886 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
+		25A5DA4A14CD277B0037F886 /* Search.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
 		25B1D68714CCE58A00227FC0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Graphics/Backgrounds/about.png; sourceTree = "<group>"; };
 		25B1D68814CCE58A00227FC0 /* book-lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "book-lib.png"; path = "Graphics/Backgrounds/book-lib.png"; sourceTree = "<group>"; };
 		25B1D68914CCE58A00227FC0 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = book.png; path = Graphics/Backgrounds/book.png; sourceTree = "<group>"; };
@@ -263,6 +268,7 @@
 				2599778314C266810016C335 /* LibraryVC.xib */,
 				25B1D6AB14CD07F000227FC0 /* ReaderVC.xib */,
 				2599777C14C0E0400016C335 /* RootVC.xib */,
+				25A5DA4A14CD277B0037F886 /* Search.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -284,6 +290,8 @@
 				25B1D6AA14CD07F000227FC0 /* ReaderVC.m */,
 				2599777A14C0E0400016C335 /* RootVC.h */,
 				2599777B14C0E0400016C335 /* RootVC.m */,
+				25A5DA4814CD277B0037F886 /* Search.h */,
+				25A5DA4914CD277B0037F886 /* Search.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -462,6 +470,7 @@
 				25B1D6BE14CD0E9100227FC0 /* vitruvii.jpg in Resources */,
 				25B1D6BF14CD0E9100227FC0 /* versionAfront.jpg in Resources */,
 				25B1D6C014CD0E9100227FC0 /* svift_dnevnik.jpg in Resources */,
+				25A5DA4C14CD277B0037F886 /* Search.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +516,7 @@
 				259977A314C684890016C335 /* LJLoader.m in Sources */,
 				25B1D6A714CCFE5000227FC0 /* GalkovskyVC.m in Sources */,
 				25B1D6AC14CD07F100227FC0 /* ReaderVC.m in Sources */,
+				25A5DA4B14CD277B0037F886 /* Search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
