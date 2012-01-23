@@ -9,10 +9,12 @@
 #import "RootVC.h"
 
 #import "JournalVC.h"
-#import "AboutVC.h"
 #import "DeadEndVC.h"
 #import "LibraryVC.h"
+
+#import "AboutVC.h"
 #import "GalkovskyVC.h"
+#import "ReaderVC.h"
 
 @interface RootVC()
 {
@@ -104,20 +106,16 @@
 
 - (IBAction)freshButtonPressed:(id)sender 
 {
-	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	ReaderVC *vc = [[ReaderVC alloc] initWithNibName:@"ReaderVC" bundle:nil];
 	[self.navigationController pushViewController:vc animated:YES];
 	[vc release];
-	
-	[self increaseHue];
 }
 
 - (IBAction)continueButtonPressed:(id)sender 
 {
-	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
+	ReaderVC *vc = [[ReaderVC alloc] initWithNibName:@"ReaderVC" bundle:nil];
 	[self.navigationController pushViewController:vc animated:YES];
 	[vc release];	
-	
-	[self decreaseHue];
 }
 
 - (IBAction)libraryButtonPressed:(id)sender {

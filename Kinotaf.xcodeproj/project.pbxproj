@@ -46,6 +46,8 @@
 		25B1D6A314CCEE5C00227FC0 /* back_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6A114CCEE5C00227FC0 /* back_orange.png */; };
 		25B1D6A714CCFE5000227FC0 /* GalkovskyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B1D6A514CCFE4F00227FC0 /* GalkovskyVC.m */; };
 		25B1D6A814CCFE5000227FC0 /* GalkovskyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6A614CCFE4F00227FC0 /* GalkovskyVC.xib */; };
+		25B1D6AC14CD07F100227FC0 /* ReaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B1D6AA14CD07F000227FC0 /* ReaderVC.m */; };
+		25B1D6AD14CD07F100227FC0 /* ReaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6AB14CD07F000227FC0 /* ReaderVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,9 @@
 		25B1D6A414CCFE4F00227FC0 /* GalkovskyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalkovskyVC.h; sourceTree = "<group>"; };
 		25B1D6A514CCFE4F00227FC0 /* GalkovskyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalkovskyVC.m; sourceTree = "<group>"; };
 		25B1D6A614CCFE4F00227FC0 /* GalkovskyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalkovskyVC.xib; sourceTree = "<group>"; };
+		25B1D6A914CD07EF00227FC0 /* ReaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderVC.h; sourceTree = "<group>"; };
+		25B1D6AA14CD07F000227FC0 /* ReaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderVC.m; sourceTree = "<group>"; };
+		25B1D6AB14CD07F000227FC0 /* ReaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReaderVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +243,7 @@
 				25B1D6A614CCFE4F00227FC0 /* GalkovskyVC.xib */,
 				2599778814C266BA0016C335 /* JournalVC.xib */,
 				2599778314C266810016C335 /* LibraryVC.xib */,
+				25B1D6AB14CD07F000227FC0 /* ReaderVC.xib */,
 				2599777C14C0E0400016C335 /* RootVC.xib */,
 			);
 			name = Xibs;
@@ -250,12 +256,14 @@
 				2599779314C2701A0016C335 /* AboutVC.m */,
 				2599778D14C26E950016C335 /* DeadEndVC.h */,
 				2599778E14C26E950016C335 /* DeadEndVC.m */,
+				25B1D6A414CCFE4F00227FC0 /* GalkovskyVC.h */,
+				25B1D6A514CCFE4F00227FC0 /* GalkovskyVC.m */,
 				2599778614C266BA0016C335 /* JournalVC.h */,
 				2599778714C266BA0016C335 /* JournalVC.m */,
 				2599778114C266810016C335 /* LibraryVC.h */,
 				2599778214C266810016C335 /* LibraryVC.m */,
-				25B1D6A414CCFE4F00227FC0 /* GalkovskyVC.h */,
-				25B1D6A514CCFE4F00227FC0 /* GalkovskyVC.m */,
+				25B1D6A914CD07EF00227FC0 /* ReaderVC.h */,
+				25B1D6AA14CD07F000227FC0 /* ReaderVC.m */,
 				2599777A14C0E0400016C335 /* RootVC.h */,
 				2599777B14C0E0400016C335 /* RootVC.m */,
 			);
@@ -409,6 +417,7 @@
 				25B1D6A214CCEE5C00227FC0 /* back_yellow.png in Resources */,
 				25B1D6A314CCEE5C00227FC0 /* back_orange.png in Resources */,
 				25B1D6A814CCFE5000227FC0 /* GalkovskyVC.xib in Resources */,
+				25B1D6AD14CD07F100227FC0 /* ReaderVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +462,7 @@
 				2599779514C2701A0016C335 /* AboutVC.m in Sources */,
 				259977A314C684890016C335 /* LJLoader.m in Sources */,
 				25B1D6A714CCFE5000227FC0 /* GalkovskyVC.m in Sources */,
+				25B1D6AC14CD07F100227FC0 /* ReaderVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
