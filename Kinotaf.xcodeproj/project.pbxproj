@@ -46,6 +46,8 @@
 		25A5DA6514CD2F190037F886 /* propaganda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5A14CD2F190037F886 /* propaganda.jpg */; };
 		25A5DA6614CD2F190037F886 /* Magnit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5B14CD2F190037F886 /* Magnit.jpg */; };
 		25A5DA6814CD2F190037F886 /* beskonechniy_tupik3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA5D14CD2F190037F886 /* beskonechniy_tupik3.jpg */; };
+		25A5DA6C14CD32B00037F886 /* BookLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5DA6A14CD32B00037F886 /* BookLib.m */; };
+		25A5DA6D14CD32B00037F886 /* BookLib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A5DA6B14CD32B00037F886 /* BookLib.xib */; };
 		25B1D68F14CCE58B00227FC0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68714CCE58A00227FC0 /* about.png */; };
 		25B1D69014CCE58B00227FC0 /* book-lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68814CCE58A00227FC0 /* book-lib.png */; };
 		25B1D69114CCE58B00227FC0 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D68914CCE58A00227FC0 /* book.png */; };
@@ -147,6 +149,9 @@
 		25A5DA5A14CD2F190037F886 /* propaganda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = propaganda.jpg; sourceTree = "<group>"; };
 		25A5DA5B14CD2F190037F886 /* Magnit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Magnit.jpg; sourceTree = "<group>"; };
 		25A5DA5D14CD2F190037F886 /* beskonechniy_tupik3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beskonechniy_tupik3.jpg; sourceTree = "<group>"; };
+		25A5DA6914CD32B00037F886 /* BookLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookLib.h; sourceTree = "<group>"; };
+		25A5DA6A14CD32B00037F886 /* BookLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookLib.m; sourceTree = "<group>"; };
+		25A5DA6B14CD32B00037F886 /* BookLib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookLib.xib; sourceTree = "<group>"; };
 		25B1D68714CCE58A00227FC0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Graphics/Backgrounds/about.png; sourceTree = "<group>"; };
 		25B1D68814CCE58A00227FC0 /* book-lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "book-lib.png"; path = "Graphics/Backgrounds/book-lib.png"; sourceTree = "<group>"; };
 		25B1D68914CCE58A00227FC0 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = book.png; path = Graphics/Backgrounds/book.png; sourceTree = "<group>"; };
@@ -284,6 +289,7 @@
 			children = (
 				2599779414C2701A0016C335 /* AboutVC.xib */,
 				25A5DA4F14CD2E5F0037F886 /* Book.xib */,
+				25A5DA6B14CD32B00037F886 /* BookLib.xib */,
 				2599778F14C26E950016C335 /* DeadEndVC.xib */,
 				25B1D6A614CCFE4F00227FC0 /* GalkovskyVC.xib */,
 				2599778814C266BA0016C335 /* JournalVC.xib */,
@@ -302,6 +308,8 @@
 				2599779314C2701A0016C335 /* AboutVC.m */,
 				25A5DA4D14CD2E5F0037F886 /* Book.h */,
 				25A5DA4E14CD2E5F0037F886 /* Book.m */,
+				25A5DA6914CD32B00037F886 /* BookLib.h */,
+				25A5DA6A14CD32B00037F886 /* BookLib.m */,
 				2599778D14C26E950016C335 /* DeadEndVC.h */,
 				2599778E14C26E950016C335 /* DeadEndVC.m */,
 				25B1D6A414CCFE4F00227FC0 /* GalkovskyVC.h */,
@@ -520,6 +528,7 @@
 				25A5DA6514CD2F190037F886 /* propaganda.jpg in Resources */,
 				25A5DA6614CD2F190037F886 /* Magnit.jpg in Resources */,
 				25A5DA6814CD2F190037F886 /* beskonechniy_tupik3.jpg in Resources */,
+				25A5DA6D14CD32B00037F886 /* BookLib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +576,7 @@
 				25B1D6AC14CD07F100227FC0 /* ReaderVC.m in Sources */,
 				25A5DA4B14CD277B0037F886 /* Search.m in Sources */,
 				25A5DA5014CD2E5F0037F886 /* Book.m in Sources */,
+				25A5DA6C14CD32B00037F886 /* BookLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,5 +10,6 @@
 
 @interface LibraryVC : UIViewController
 - (IBAction)backButtonPressed;
+- (IBAction)swiftWasPressed;
 
 @end

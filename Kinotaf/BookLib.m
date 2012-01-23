@@ -1,22 +1,20 @@
 //
-//  LibraryVC.m
+//  BookLib.m
 //  Kinotaf
 //
-//  Created by Константин Забелин on 15.01.12.
+//  Created by Константин Забелин on 23.01.12.
 //  Copyright (c) 2012 Zababako. All rights reserved.
 //
 
-#import "LibraryVC.h"
-
 #import "BookLib.h"
 
-@implementation LibraryVC
+@implementation BookLib
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.title = @"Билбидатека";
+        // Custom initialization
     }
     return self;
 }
@@ -51,11 +49,5 @@
 
 - (IBAction)backButtonPressed {
 	[self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)swiftWasPressed {
-	BookLib *vc = [[BookLib alloc] initWithNibName:@"BookLib" bundle:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
 }
 @end
