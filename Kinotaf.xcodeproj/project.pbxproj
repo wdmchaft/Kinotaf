@@ -48,6 +48,15 @@
 		25B1D6A814CCFE5000227FC0 /* GalkovskyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6A614CCFE4F00227FC0 /* GalkovskyVC.xib */; };
 		25B1D6AC14CD07F100227FC0 /* ReaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B1D6AA14CD07F000227FC0 /* ReaderVC.m */; };
 		25B1D6AD14CD07F100227FC0 /* ReaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6AB14CD07F000227FC0 /* ReaderVC.xib */; };
+		25B1D6B814CD0E9100227FC0 /* strugatskie_ulitka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6AF14CD0E9100227FC0 /* strugatskie_ulitka.jpg */; };
+		25B1D6B914CD0E9100227FC0 /* strugatskie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B014CD0E9100227FC0 /* strugatskie.jpg */; };
+		25B1D6BA14CD0E9100227FC0 /* morozov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B114CD0E9100227FC0 /* morozov.jpg */; };
+		25B1D6BB14CD0E9100227FC0 /* belaev-kec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B214CD0E9100227FC0 /* belaev-kec.jpg */; };
+		25B1D6BC14CD0E9100227FC0 /* wells.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B314CD0E9100227FC0 /* wells.jpg */; };
+		25B1D6BD14CD0E9100227FC0 /* rozanov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B414CD0E9100227FC0 /* rozanov.jpg */; };
+		25B1D6BE14CD0E9100227FC0 /* vitruvii.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B514CD0E9100227FC0 /* vitruvii.jpg */; };
+		25B1D6BF14CD0E9100227FC0 /* versionAfront.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B614CD0E9100227FC0 /* versionAfront.jpg */; };
+		25B1D6C014CD0E9100227FC0 /* svift_dnevnik.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B714CD0E9100227FC0 /* svift_dnevnik.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +137,15 @@
 		25B1D6A914CD07EF00227FC0 /* ReaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderVC.h; sourceTree = "<group>"; };
 		25B1D6AA14CD07F000227FC0 /* ReaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderVC.m; sourceTree = "<group>"; };
 		25B1D6AB14CD07F000227FC0 /* ReaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReaderVC.xib; sourceTree = "<group>"; };
+		25B1D6AF14CD0E9100227FC0 /* strugatskie_ulitka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = strugatskie_ulitka.jpg; sourceTree = "<group>"; };
+		25B1D6B014CD0E9100227FC0 /* strugatskie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = strugatskie.jpg; sourceTree = "<group>"; };
+		25B1D6B114CD0E9100227FC0 /* morozov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = morozov.jpg; sourceTree = "<group>"; };
+		25B1D6B214CD0E9100227FC0 /* belaev-kec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "belaev-kec.jpg"; sourceTree = "<group>"; };
+		25B1D6B314CD0E9100227FC0 /* wells.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wells.jpg; sourceTree = "<group>"; };
+		25B1D6B414CD0E9100227FC0 /* rozanov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rozanov.jpg; sourceTree = "<group>"; };
+		25B1D6B514CD0E9100227FC0 /* vitruvii.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vitruvii.jpg; sourceTree = "<group>"; };
+		25B1D6B614CD0E9100227FC0 /* versionAfront.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = versionAfront.jpg; sourceTree = "<group>"; };
+		25B1D6B714CD0E9100227FC0 /* svift_dnevnik.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = svift_dnevnik.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +311,7 @@
 				25B1D6A014CCEE5C00227FC0 /* back_yellow.png */,
 				25B1D6A114CCEE5C00227FC0 /* back_orange.png */,
 				25B1D69B14CCEE1400227FC0 /* Backgrounds */,
+				25B1D6AE14CD0E6700227FC0 /* Samples */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -310,6 +329,22 @@
 				25B1D68E14CCE58B00227FC0 /* lib.png */,
 			);
 			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		25B1D6AE14CD0E6700227FC0 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				25B1D6AF14CD0E9100227FC0 /* strugatskie_ulitka.jpg */,
+				25B1D6B014CD0E9100227FC0 /* strugatskie.jpg */,
+				25B1D6B114CD0E9100227FC0 /* morozov.jpg */,
+				25B1D6B214CD0E9100227FC0 /* belaev-kec.jpg */,
+				25B1D6B314CD0E9100227FC0 /* wells.jpg */,
+				25B1D6B414CD0E9100227FC0 /* rozanov.jpg */,
+				25B1D6B514CD0E9100227FC0 /* vitruvii.jpg */,
+				25B1D6B614CD0E9100227FC0 /* versionAfront.jpg */,
+				25B1D6B714CD0E9100227FC0 /* svift_dnevnik.jpg */,
+			);
+			name = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +453,15 @@
 				25B1D6A314CCEE5C00227FC0 /* back_orange.png in Resources */,
 				25B1D6A814CCFE5000227FC0 /* GalkovskyVC.xib in Resources */,
 				25B1D6AD14CD07F100227FC0 /* ReaderVC.xib in Resources */,
+				25B1D6B814CD0E9100227FC0 /* strugatskie_ulitka.jpg in Resources */,
+				25B1D6B914CD0E9100227FC0 /* strugatskie.jpg in Resources */,
+				25B1D6BA14CD0E9100227FC0 /* morozov.jpg in Resources */,
+				25B1D6BB14CD0E9100227FC0 /* belaev-kec.jpg in Resources */,
+				25B1D6BC14CD0E9100227FC0 /* wells.jpg in Resources */,
+				25B1D6BD14CD0E9100227FC0 /* rozanov.jpg in Resources */,
+				25B1D6BE14CD0E9100227FC0 /* vitruvii.jpg in Resources */,
+				25B1D6BF14CD0E9100227FC0 /* versionAfront.jpg in Resources */,
+				25B1D6C014CD0E9100227FC0 /* svift_dnevnik.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

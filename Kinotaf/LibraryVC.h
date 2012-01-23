@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LibraryVC : UIViewController
+- (IBAction)backButtonPressed;
 
 @end

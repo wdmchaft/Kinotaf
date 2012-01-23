@@ -88,7 +88,8 @@
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
-- (void)dealloc {
+- (void)dealloc 
+{
 	[infoButton release];
 	[continueButton release];
 	[freshButton release];

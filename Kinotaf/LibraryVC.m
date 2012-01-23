@@ -47,4 +47,7 @@
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
+- (IBAction)backButtonPressed {
+	[self.navigationController popViewControllerAnimated:YES];
+}
 @end
