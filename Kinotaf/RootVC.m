@@ -12,6 +12,7 @@
 #import "AboutVC.h"
 #import "DeadEndVC.h"
 #import "LibraryVC.h"
+#import "GalkovskyVC.h"
 
 @interface RootVC()
 {
@@ -21,9 +22,6 @@
 
 @implementation RootVC
 @synthesize infoButton;
-@synthesize duckButton;
-@synthesize deadEndButton;
-@synthesize ljButton;
 @synthesize continueButton;
 @synthesize freshButton;
 @synthesize libraryButton;
@@ -75,9 +73,6 @@
 - (void)viewDidUnload
 {
 	[self setInfoButton:	nil];
-	[self setDuckButton:	nil];
-	[self setDeadEndButton:	nil];
-	[self setLjButton:		nil];
 	[self setContinueButton:nil];
 	[self setFreshButton:	nil];
 	[self setLibraryButton:	nil];
@@ -93,40 +88,10 @@
 
 - (void)dealloc {
 	[infoButton release];
-	[duckButton release];
-	[deadEndButton release];
-	[ljButton release];
 	[continueButton release];
 	[freshButton release];
 	[libraryButton release];
 	[super dealloc];
-}
-
-- (IBAction)ljButtonPressed:(id)sender 
-{
-	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
-	
-	[self increaseHue];
-}
-
-- (IBAction)deadEndButtonPressed:(id)sender 
-{
-	DeadEndVC *vc = [[DeadEndVC alloc] initWithNibName:@"DeadEndVC" bundle:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
-
-	[self decreaseHue];
-}
-
-- (IBAction)duckButtonPressed:(id)sender 
-{
-	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
-	
-	[self increaseHue];
 }
 
 - (IBAction)infoButtonPressed:(id)sender {
@@ -161,6 +126,13 @@
 	[vc release];	
 	
 	[self increaseHue];
+}
+
+- (IBAction)galkovskyButtonPressed:(id)sender 
+{
+	GalkovskyVC *vc = [[GalkovskyVC alloc] initWithNibName:@"GalkovskyVC" bundle:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+	[vc release];
 }
 
 @end
