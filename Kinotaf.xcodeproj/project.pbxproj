@@ -123,7 +123,7 @@
 		2599778114C266810016C335 /* LibraryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryVC.h; sourceTree = "<group>"; };
 		2599778214C266810016C335 /* LibraryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryVC.m; sourceTree = "<group>"; };
 		2599778314C266810016C335 /* LibraryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryVC.xib; sourceTree = "<group>"; };
-		2599778614C266BA0016C335 /* JournalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalVC.h; sourceTree = "<group>"; };
+		2599778614C266BA0016C335 /* JournalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JournalVC.h; sourceTree = "<group>"; };
 		2599778714C266BA0016C335 /* JournalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalVC.m; sourceTree = "<group>"; };
 		2599778814C266BA0016C335 /* JournalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalVC.xib; sourceTree = "<group>"; };
 		2599778D14C26E950016C335 /* DeadEndVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeadEndVC.h; sourceTree = "<group>"; };
