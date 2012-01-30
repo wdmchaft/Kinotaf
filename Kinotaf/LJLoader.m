@@ -8,108 +8,122 @@
 
 #import "LJLoader.h"
 
-#import "XMLRPCConnectionManager.h"
-#import "XMLRPCConnection.h"
 #import "XMLRPCRequest.h"
-#import "XMLRPCResponse.h"
+#import "XMLRPCConnectionManager.h"
+#import "RequestDelegate.h"
+
+NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 
 @interface LJLoader()
 {
-	XMLRPCRequest *request_;
-	NSMutableData *data_;
+	BOOL		requestThreadShouldStop_;
+	NSRunLoop*	requestRunLoop_;
+	NSThread*	requestThread_;	
+	
+	NSMutableDictionary *requestDelegates_;
 }
-@property (retain, readonly, nonatomic) XMLRPCRequest *request;
+
+- (void)requestThreadMain;
 @end
 
 @implementation LJLoader
 
+#pragma mark - Main Thread
+
+- (id)init
+{
+	self = [super init];
+	if (!self) { return nil; }
+	
+	requestDelegates_ = [[NSMutableDictionary alloc] init];
+		
+	requestThreadShouldStop_ = NO;
+	
+	NSPort *port = [NSMachPort port];
+	port.delegate = self;
+	assert(port);
+	
+//	[[NSRunLoop currentRunLoop] addPort:port forMode:NSDefaultRunLoopMode];
+	
+	[self performSelectorInBackground:@selector(launchRequestThreadWithPort:) withObject:port];
+	
+	return self;
+}
+
 - (void)dealloc
 {
-	[request_ release];
-	[data_ release];
-	
+	requestThreadShouldStop_ = YES;
+
+	[requestDelegates_ release];
+
 	[super dealloc];
 }
 
-- (XMLRPCRequest *)request
+- (void)getChallenge
 {
-	if (request_) { return request_; }
+	NSURL* url = [NSURL URLWithString:KTLJInterfaceURL];
 	
-	NSURL* url = [NSURL URLWithString:@"http://www.livejournal.com/interface/xmlrpc"];
+	NSString *method = @"LJ.XMLRPC.getchallenge";
 	
-	request_ = [[XMLRPCRequest alloc] initWithURL:url];
-	[request_ setMethod:@"LJ.XMLRPC.getchallenge" withParameter:nil];	
+	XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:url];
+	[request setMethod:method withParameter:nil];	
 	
-	NSLog(@"Request body: %@", [request_ body]);
+	static long int i = 0;
+	RequestDelegate *requestDelegate = [[RequestDelegate alloc] init];
+	requestDelegate.requstId = [NSString stringWithFormat:@"%@,%d", method, ++i];
 	
-	return request_;
+	[requestDelegate addObserver:self forKeyPath:@"result" options:0 context:nil];
+	
+	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:request, @"request", requestDelegate, @"requestDelegate", nil];
+								
+	[self performSelector:@selector(scheduleRequest:) onThread:requestThread_ withObject:userInfo waitUntilDone:NO];
 }
 
-- (void)start
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	XMLRPCConnectionManager *manager = [XMLRPCConnectionManager sharedManager];
-	[manager spawnConnectionWithXMLRPCRequest:self.request delegate: self];
+	NSLog(@"Result value changed");
 }
 
-#pragma mark - Connection delegate methods
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+- (void)downloadPosts
 {
-	NSLog(@"Thread that finishes: %@", [[NSThread currentThread] name]);
-	NSString* result = [[NSString alloc] initWithData:data_ encoding:NSUTF8StringEncoding];
-	
-	NSLog(@"Succeeded! Received %d bytes of data, interpretated as a string: %@",[data_ length], result);
-    
-    [request_ release];
-	request_ = nil;
-    [data_ release];
-	data_ = nil;
+		// TODO: implement
 }
 
-#pragma mark - XMLRPCConnection delegate
+#pragma mark - Common Methods
 
-- (void)request:(XMLRPCRequest *)request didReceiveResponse: (XMLRPCResponse *)response
-{	
-	if ([response isFault]) 
+- (void)handlePortMessage:(NSPortMessage *)message
+{
+	NSLog(@"Handling port message");
+}
+
+#pragma mark - Requests Thread
+
+- (void)launchRequestThreadWithPort:(NSPort *)port
+{
+	@autoreleasepool 
 	{
-        NSLog(@"Fault code: %@",   [response faultCode]);
-        NSLog(@"Fault string: %@", [response faultString]);
-    } else {
-        NSLog(@"Parsed response: %@", [response object]);
-    }
+		requestThread_  = [NSThread currentThread];
+		requestRunLoop_ = [NSRunLoop currentRunLoop];
+		
+		[requestRunLoop_ addPort:port forMode:NSDefaultRunLoopMode];
+		
+		while (!requestThreadShouldStop_ && [requestRunLoop_ runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+				
+		requestRunLoop_ = nil;
+		requestThread_  = nil;
+	}
+}
+
+- (void)scheduleRequest:(NSDictionary *)userInfo
+{
+	XMLRPCRequest*		request =			[userInfo objectForKey:@"request"];
+	RequestDelegate*	requestDelegate =	[userInfo objectForKey:@"requestDelegate"];
 	
-    NSLog(@"Response body: %@", [response body]);
+	assert(request);
+	assert(requestDelegate);
 	
-	[data_ setLength:0];
+	XMLRPCConnectionManager *manager = [XMLRPCConnectionManager sharedManager];
+	[manager spawnConnectionWithXMLRPCRequest:request delegate: requestDelegate];
 }
-
-- (void)request:(XMLRPCRequest *)request didFailWithError: (NSError *)error
-{
-    [request_ release];
-	request_ = nil;
-    [data_ release];
-	data_ = nil;
-    
-	NSLog(@"Connection failed! Error - %@ %@",
-		  [error localizedDescription],
-		  [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
-}
-
-- (BOOL)request:(XMLRPCRequest *)request canAuthenticateAgainstProtectionSpace: (NSURLProtectionSpace *)protectionSpace
-{
-	NSLog(@"Requset can authenticate against protection space, but NO");
-	return NO;
-}
-
-- (void)request:(XMLRPCRequest *)request didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge
-{
-	NSLog(@"Requst received authentication challenge");
-}
-
-- (void)request: (XMLRPCRequest *)request didCancelAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge
-{
-	NSLog(@"Requst cancelled authentication challenge");
-}
-
 
 @end

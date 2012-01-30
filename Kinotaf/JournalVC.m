@@ -76,7 +76,7 @@
 
 - (void)refresh
 {
-	[loader_ start];
+	[loader_ getChallenge];
 }
 
 #pragma mark - TableView data source

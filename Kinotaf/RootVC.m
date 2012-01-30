@@ -115,7 +115,7 @@
 
 - (IBAction)continueButtonPressed:(id)sender 
 {
-	ReaderVC *vc = [[ReaderVC alloc] initWithNibName:@"ReaderVC" bundle:nil];
+	JournalVC *vc = [[JournalVC alloc] initWithNibName:@"JournalVC" bundle:nil];
 	[self.navigationController pushViewController:vc animated:YES];
 	[vc release];	
 }

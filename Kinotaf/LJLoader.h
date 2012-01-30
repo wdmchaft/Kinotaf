@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XMLRPCConnectionDelegate.h"
 
-@interface LJLoader : NSObject <XMLRPCConnectionDelegate>
+@interface LJLoader : NSObject <NSPortDelegate>
 
-- (void)start;
+- (void)downloadPosts;
+- (void)getChallenge;
 
 @end

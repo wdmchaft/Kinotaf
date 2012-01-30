@@ -71,6 +71,7 @@
 		25B1D6BE14CD0E9100227FC0 /* vitruvii.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B514CD0E9100227FC0 /* vitruvii.jpg */; };
 		25B1D6BF14CD0E9100227FC0 /* versionAfront.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B614CD0E9100227FC0 /* versionAfront.jpg */; };
 		25B1D6C014CD0E9100227FC0 /* svift_dnevnik.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25B1D6B714CD0E9100227FC0 /* svift_dnevnik.jpg */; };
+		25CD943714D6F0C000EAD94E /* RequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CD943614D6F0C000EAD94E /* RequestDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,8 @@
 		25B1D6B514CD0E9100227FC0 /* vitruvii.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vitruvii.jpg; sourceTree = "<group>"; };
 		25B1D6B614CD0E9100227FC0 /* versionAfront.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = versionAfront.jpg; sourceTree = "<group>"; };
 		25B1D6B714CD0E9100227FC0 /* svift_dnevnik.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = svift_dnevnik.jpg; sourceTree = "<group>"; };
+		25CD943514D6F0C000EAD94E /* RequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
+		25CD943614D6F0C000EAD94E /* RequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +336,8 @@
 			children = (
 				259977A114C684890016C335 /* LJLoader.h */,
 				259977A214C684890016C335 /* LJLoader.m */,
+				25CD943514D6F0C000EAD94E /* RequestDelegate.h */,
+				25CD943614D6F0C000EAD94E /* RequestDelegate.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				25A5DA4B14CD277B0037F886 /* Search.m in Sources */,
 				25A5DA5014CD2E5F0037F886 /* Book.m in Sources */,
 				25A5DA6C14CD32B00037F886 /* BookLib.m in Sources */,
+				25CD943714D6F0C000EAD94E /* RequestDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
