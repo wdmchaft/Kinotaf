@@ -47,8 +47,9 @@
 	UINavigationController* nc = self.nc;
 //	nc.navigationBarHidden = YES;
 	[nc pushViewController:root animated:NO];
-	[self.window addSubview:nc.view];
+	[root release];
 	
+	[self.window addSubview:nc.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

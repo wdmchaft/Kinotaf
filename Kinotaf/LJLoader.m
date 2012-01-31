@@ -12,7 +12,9 @@
 #import "XMLRPCConnectionManager.h"
 #import "RequestDelegate.h"
 
-NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
+#define kCheckInMessage 100
+
+NSString* LJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 
 @interface LJLoader()
 {
@@ -20,10 +22,9 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 	NSRunLoop*	requestRunLoop_;
 	NSThread*	requestThread_;	
 	
-	NSMutableDictionary *requestDelegates_;
+	NSMutableSet *requestDelegates_;
 }
 
-- (void)requestThreadMain;
 @end
 
 @implementation LJLoader
@@ -35,7 +36,7 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 	self = [super init];
 	if (!self) { return nil; }
 	
-	requestDelegates_ = [[NSMutableDictionary alloc] init];
+	requestDelegates_ = [[NSMutableSet alloc] init];
 		
 	requestThreadShouldStop_ = NO;
 	
@@ -43,7 +44,7 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 	port.delegate = self;
 	assert(port);
 	
-//	[[NSRunLoop currentRunLoop] addPort:port forMode:NSDefaultRunLoopMode];
+	[[NSRunLoop currentRunLoop] addPort:port forMode:NSDefaultRunLoopMode];
 	
 	[self performSelectorInBackground:@selector(launchRequestThreadWithPort:) withObject:port];
 	
@@ -52,6 +53,7 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 
 - (void)dealloc
 {
+	NSLog(@"LJ loader deallocated");
 	requestThreadShouldStop_ = YES;
 
 	[requestDelegates_ release];
@@ -61,9 +63,8 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 
 - (void)getChallenge
 {
-	NSURL* url = [NSURL URLWithString:KTLJInterfaceURL];
-	
-	NSString *method = @"LJ.XMLRPC.getchallenge";
+	NSURL*		url =		[NSURL URLWithString:LJInterfaceURL];	
+	NSString*	method =	@"LJ.XMLRPC.getchallenge";
 	
 	XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL:url];
 	[request setMethod:method withParameter:nil];	
@@ -71,10 +72,12 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 	static long int i = 0;
 	RequestDelegate *requestDelegate = [[RequestDelegate alloc] init];
 	requestDelegate.requstId = [NSString stringWithFormat:@"%@,%d", method, ++i];
-	
-	[requestDelegate addObserver:self forKeyPath:@"result" options:0 context:nil];
-	
+
+	[requestDelegates_ addObject:requestDelegate];
+	[requestDelegate release];
+		
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:request, @"request", requestDelegate, @"requestDelegate", nil];
+	[request release];
 								
 	[self performSelector:@selector(scheduleRequest:) onThread:requestThread_ withObject:userInfo waitUntilDone:NO];
 }
@@ -91,26 +94,46 @@ NSString* KTLJInterfaceURL = @"http://www.livejournal.com/interface/xmlrpc";
 
 #pragma mark - Common Methods
 
-- (void)handlePortMessage:(NSPortMessage *)message
+- (void)handlePortMessage:(NSPortMessage *)portMessage
 {
 	NSLog(@"Handling port message");
+
+	unsigned int message = [portMessage msgid];
+	if (message == kCheckInMessage)
+	{
+		
+	}
 }
 
 #pragma mark - Requests Thread
 
-- (void)launchRequestThreadWithPort:(NSPort *)port
+- (void)launchRequestThreadWithPort:(NSPort *)toMainPort
 {
 	@autoreleasepool 
 	{
 		requestThread_  = [NSThread currentThread];
 		requestRunLoop_ = [NSRunLoop currentRunLoop];
 		
-		[requestRunLoop_ addPort:port forMode:NSDefaultRunLoopMode];
+			// TODO: store toMainPort
 		
-		while (!requestThreadShouldStop_ && [requestRunLoop_ runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+		NSPort *toRequestPort = [NSMachPort port];
+		[requestRunLoop_ addPort:toRequestPort forMode:NSDefaultRunLoopMode];
+		
+		NSPortMessage *messageObj = [[NSPortMessage alloc] initWithSendPort:toMainPort receivePort:toRequestPort components:nil];
+		if (messageObj)
+		{
+				// Finish configuring the message and send it immediately.
+			[messageObj setMsgid:kCheckInMessage];
+			[messageObj sendBeforeDate:[NSDate date]];
+		}
+		[messageObj release];
+		
+		while (!requestThreadShouldStop_ && [requestRunLoop_ runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]]); // [NSDate distantFuture]
 				
 		requestRunLoop_ = nil;
 		requestThread_  = nil;
+		
+		NSLog(@"Request thread ended");
 	}
 }
 
